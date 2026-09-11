@@ -27,9 +27,12 @@ export class TicketsService {
       priority: 'high',
       status: 'closed',
       createdAt: new Date().toISOString(),
-    },  
+    },
   ];
   findAll() {
     return this.tickets;
+  }
+  findOne(id: number) {
+    return this.tickets.find((ticket) => ticket.id === id);
   }
 }
